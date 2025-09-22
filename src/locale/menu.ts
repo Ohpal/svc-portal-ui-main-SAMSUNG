@@ -83,8 +83,9 @@ export const menuLocale = {
     'menu.particular': 'Ship Particular',
     'menu.fleet': 'Fleet Management',
     'menu.lesson': 'Lesson Learend',
-    'menu.lesson.learned': 'Lesson Learend',
+    'menu.lesson.learned': 'Lessonlearned Search',
     'menu.lesson.write': 'Knowledge Sharing+',
+    'menu.lesson.board': 'Lessonlearned History',
 
     'menu.digitalization': 'Digitalization',
     'menu.personnel': 'Personnel',
@@ -198,6 +199,7 @@ export const menuLocale = {
     'menu.schedule.ship-mgmt': '선박등록',
     'menu.lesson.learned': '시운전지식공유',
     'menu.lesson.write': '지식공유+',
+    'menu.lesson.board': '시운전지식검색',
     'menu.digitalization.daily-report': '일일보고',
     'menu.digitalization.doc-mgmt': '문서관리',
     'menu.simulation.digitaltwin': '시뮬레이션 시나리오',

@@ -1,5 +1,5 @@
 import { importShared } from "../__federation_fn_import/__federation_fn_import-CyQYGTN2.js";
-import axiosInstance, { b as useAuthStore } from "../__federation_expose_Axios/__federation_expose_Axios-BG-6nOb8.js";
+import axiosInstance, { b as useAuthStore } from "../__federation_expose_Axios/__federation_expose_Axios-CPZuurz-.js";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -4293,15 +4293,13 @@ const useCompanyStore = defineStore$1("company", () => {
   function getCompanyList(userSession) {
     if (userSession.roleName === "Admin") {
       axiosInstance.get("/krakend/svcfw/api/companies", { params: { pageSize: 9999, pageNumber: 0 } }).then((response) => {
-        var _a2, _b, _c;
-        const platform = (_a2 = window == null ? void 0 : window.sessionStorage) == null ? void 0 : _a2.getItem("platform");
+        var _a2;
+        (_a2 = window == null ? void 0 : window.sessionStorage) == null ? void 0 : _a2.getItem("platform");
         window.SHARE_DATA.companyList = response.data.rows;
         companyListValue.value = response.data.rows;
-        if (((_c = (_b = response.data) == null ? void 0 : _b.rows) == null ? void 0 : _c.length) === 1 || platform === "onboard") {
-          const data = response.data.rows.filter((e) => e.name === userSession.companyName);
-          if (data.length === 1) {
-            setCompanyInfo(data[0]);
-          }
+        const data = response.data.rows.filter((e) => e.name === userSession.companyName);
+        if (data.length === 1) {
+          setCompanyInfo(data[0]);
         }
       });
     } else {
@@ -4343,11 +4341,7 @@ const useShipStore = defineStore("ship", () => {
       const ship = getShipInfo();
       if (ship) {
         const selected = response.data.rows.filter((e) => e.shipId === ship.shipId);
-        if (selected.length < 1) {
-          setShipInfo(null);
-        } else {
-          setShipInfo(selected[0]);
-        }
+        setShipInfo(selected[0]);
       }
       window.SHARE_DATA.shipList = response.data.rows;
       shipListValue.value = response.data.rows;

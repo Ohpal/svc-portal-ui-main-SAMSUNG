@@ -20,12 +20,12 @@ export const useCompanyStore = defineStore('company',()=>{
                 const platform = window?.sessionStorage?.getItem('platform');
                 window.SHARE_DATA.companyList = response.data.rows
                 companyListValue.value = response.data.rows
-                if(response.data?.rows?.length === 1 || platform === 'onboard') {
+                // if(response.data?.rows?.length === 1 || platform === 'onboard') {
                     const data = response.data.rows.filter(e=> e.name === userSession.companyName);
                     if(data.length === 1) {
                         setCompanyInfo(data[0])
                     }
-                }
+                // }
             })
         } else {
             // axiosInstance.get(`/krakend/svcfw/api/users/${userSession.userId}`).then(response => {
