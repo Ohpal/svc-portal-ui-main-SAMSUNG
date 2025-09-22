@@ -1,0 +1,6 @@
+@mixin tablet {
+  @media (min-width: 1180px) {@content;} // 1180
+}
+@mixin pc {
+  @media (min-width: 1360px) {@content;} // 1360
+}

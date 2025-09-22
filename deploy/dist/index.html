@@ -1,0 +1,77 @@
+<!doctype html>
+<html
+  lang="ko"
+  style="overflow-x: auto"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="/favicon.ico"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SeaTrial</title>
+
+    <!-- Leaflet 1.4.0 (Windy용) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script>
+      window.LeafletV14 = L.noConflict(true);
+    </script>
+
+    <!-- Leaflet 1.9.4 (LeafMap용) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- 1.9.4에만 rotate + rotatedMarker 패치 -->
+    <script>
+      window.L = window.LeafletV19 = window.L;
+    </script>
+    <script src="https://unpkg.com/leaflet-rotate@0.2.7/dist/leaflet-rotate.js"></script>
+    <script src="https://unpkg.com/leaflet-rotatedmarker@0.2.0/leaflet.rotatedMarker.js"></script>
+    <script>
+      window.LeafletV19 = L.noConflict(true);
+      delete window.L;
+    </script>
+
+    <!-- 1.4.0에도 rotatedMarker만 패치 -->
+    <script>
+      window.L = window.LeafletV14;
+    </script>
+    <script src="https://unpkg.com/leaflet-rotatedmarker@0.2.0/leaflet.rotatedMarker.js"></script>
+    <script>
+      delete window.L;
+    </script>
+    <script type="module" crossorigin src="/js/index/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/__federation_fn_import/__federation_fn_import-CyQYGTN2.js">
+    <link rel="modulepreload" crossorigin href="/js/__federation_expose_Axios/__federation_expose_Axios-BG-6nOb8.js">
+    <link rel="modulepreload" crossorigin href="/js/__federation_expose_SideMenuItem/__federation_expose_SideMenuItem-pJ3tjjBk.js">
+    <link rel="modulepreload" crossorigin href="/js/__federation_expose_SideNaviLayout/__federation_expose_SideNaviLayout-vMoWIKWK.js">
+    <link rel="modulepreload" crossorigin href="/js/_commonjsHelpers/_commonjsHelpers-DWwsNxpa.js">
+    <link rel="stylesheet" crossorigin href="/css/__federation_expose_SideMenuItem-4h_gnczk.__federation_expose_SideMenuItem.css">
+    <link rel="stylesheet" crossorigin href="/css/__federation_expose_SideNaviLayout-B_eYDlgr.__federation_expose_SideNaviLayout.css">
+    <link rel="stylesheet" crossorigin href="/css/index-d9aIrKhb.index.css">
+  </head>
+  <body class="u-app">
+    <div id="app"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>

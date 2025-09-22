@@ -1,0 +1,1 @@
+declare module 'vue-three-round-slider';

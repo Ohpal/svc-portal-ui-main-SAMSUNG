@@ -1,0 +1,10 @@
+@echo off
+set NODE_ENV=development
+set VITE_PORT_HTTP=32000
+set VITE_CONFIG_PATH=/home/tapp/CFG/service/svc-portal-ui/conf
+set VITE_LOG_PATH=/home/tapp/var/logs/service/svc-portal-ui/logs
+set VITE_API_TARGET=http://localhost:30080/
+set VITE_DATAP_TARGET=http://192.168.7.147:9092/
+set VITE_STATIC_INFO_API_TARGET=http://localhost:9091/
+set VITE_WS_TARGET=ws://localhost:9000/
+node server.js

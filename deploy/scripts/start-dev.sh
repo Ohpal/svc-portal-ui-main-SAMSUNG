@@ -1,0 +1,24 @@
+#!/bin/bash
+NODE_ENV='production' \
+VITE_PORT_HTTP='32000' \
+VITE_PORT_HTTPS='32001' \
+VITE_CONFIG_PATH='/home/tapp/CFG/service/svc-portal-ui/conf' \
+VITE_LOG_PATH='/home/tapp/var/logs/service/svc-portal-ui/logs' \
+VITE_API_TARGET='http://localhost:9092/' \
+VITE_GEO_TARGET='http://localhost:7080' \
+VITE_STATIC_INFO_API_TARGET='http://localhost:9091/' \
+VITE_WS_TARGET='ws://192.168.7.144:9000' \
+VITE_VOYAGE_TARGET='http://localhost:32010' \
+VITE_SECURITY_TARGET='http://localhost:32020' \
+VITE_SPMS_TARGET='http://localhost:32030' \
+VITE_EQUIPMENT_TARGET='http://localhost:32040' \
+VITE_EMISSION_TARGET='http://localhost:32050' \
+VITE_CREW_SUPPORT_TARGET='http://localhost:32070' \
+VITE_SAFETY_TARGET='http://localhost:32090' \
+VITE_SETTING_TARGET='http://localhost:32100' \
+VITE_FLEET_TARGET='http://localhost:32110' \
+rims-api='http://rims.iptime.org:4500' \
+api='http://rims.iptime.org:4600' \
+kdt_api='http://rims.iptime.org:4700' \
+unity='http://rims.iptime.org:4700' \
+node /home/tapp/PKG/service/svc-portal-ui/server.js
